@@ -170,6 +170,9 @@ export default class Carousel extends Component {
 
   _onScrollBegin = () => {
     this._clearTimer();
+    if(this.props.onUserScroll){
+      this.props.onUserScroll();
+    }
   }
 
   _onScrollEnd = (event) => {
